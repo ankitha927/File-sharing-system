@@ -1,0 +1,98 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* file shareing hme */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.img {
+  width: 30%;
+}
+
+.wrapper {
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #445a6f;
+  margin: 40px 0;
+}
+
+input {
+  margin: 20px 0;
+  width: 300px;
+  padding: 8px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #445a6f;
+  border: 1px solid #445a6f;
+  color: #fff;
+  font-size: 20px;
+  margin: 30px 0;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col bg-yellow-300">
+    <h1 class="text-4xl font-bold flex items-center justify-center text-yellow-800 mb-2 mt-10"><br>Pynapple Share</h1>
+    <div class="flex items-center justify-center flex-grow">
+        <div class="max-w-md p-20 w-full bg-white bg-opacity-70 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-6 border border-blue-300 text-center">
+            <h1 class="text-2xl font-bold text-yellow-900 mb-4">Sorry Your Limit Has Reached</h1>
+            <p class="">Ask the sender to reshare the link</p>
+            <!-- <button id="downloadBtn" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:from-blue-600 hover:to-purple-600 transition duration-300 shadow-lg">Download File</button> -->
+        </div>
+    </div>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            window.location.href = `/api/v1/tdownload/${token}`;
+        });
+    </script>
+</body>
+</html>

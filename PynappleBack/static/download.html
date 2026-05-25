@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporary File Download</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles can be added here if needed */
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col bg-yellow-300">
+<h1 class="text-4xl font-bold flex items-center justify-center text-yellow-800 mb-2 mt-10"><br>Pynapple Share</h1>
+    <div class="flex items-center justify-center flex-grow">
+        <div class="max-w-md w-full bg-white bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-lg rounded-lg p-6 border border-blue-300 text-center">
+            <h1 class="text-2xl font-bold text-yellow-900 mb-4">This is a temporary file you can only download it once </h1>
+            <!-- <h1 class="text-2xl font-bold text-yellow-900 mb-4">Click the button to download</h1> -->
+            <button id="downloadBtn"
+                class="px-6 py-3 bg-yellow-700 text-white rounded-full hover:bg-yellow-800 transition duration-300 shadow-lg">Download
+                File</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            window.location.href = `/api/v1/tdownload/${token}`;
+        });
+    </script>
+</body>
+
+</html>

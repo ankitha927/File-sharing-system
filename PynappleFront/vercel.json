@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ],
+    "redirects": [
+      { "source": "/api/(.*)", "destination": "/api/$1", "statusCode": 200 }
+    ]
+  }
